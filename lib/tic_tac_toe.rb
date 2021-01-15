@@ -11,6 +11,10 @@ class TicTacToe
     [2,4,6]
   ]
 
+  def input_to_index(input)
+    input.to_i-1
+  end
+
   def initialize(board = nil)
     @board = board || Array.new(9, " ")
   end
