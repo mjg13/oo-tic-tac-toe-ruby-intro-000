@@ -67,6 +67,10 @@ class TicTacToe
     end
   end
 
+  def won?
+    WIN_COMBINATIONS.detect do |win_combo|
+      winning_combo?(win_combo, X) || winning_combo?(win_combo, 'O')
+
   def play
   end
 end
