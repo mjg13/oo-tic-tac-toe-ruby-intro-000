@@ -28,7 +28,7 @@ class TicTacToe
   end
 
   def current_player
-    turn_count % 2 ==3 ? "X" : "O"
+    turn_count % 2 ==1 ? "X" : "O"
   end
 
   def turn_count
