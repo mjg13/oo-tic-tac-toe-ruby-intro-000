@@ -57,4 +57,10 @@ class TicTacToe
     else
       turn
     end
+
+    #winning
+
+    def winning_combo?(win_combo, token)
+      win_combo.all? do |spot| {@board[spot] == token}
+    end
 end
