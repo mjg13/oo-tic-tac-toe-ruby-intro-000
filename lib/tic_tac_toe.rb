@@ -106,7 +106,7 @@ class TicTacToe
     if draw?
       puts("Cat's Game!")
     else
-      puts("Congradulations #{winner}!")
+      puts("Congratulations #{winner}!")
     end
   end
 end
