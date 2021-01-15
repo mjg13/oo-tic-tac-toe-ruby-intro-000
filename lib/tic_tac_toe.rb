@@ -11,12 +11,20 @@ class TicTacToe
     [2,4,6]
   ]
 
+  def initialize(board = nil)
+    @board = board || Array.new(9, " ")
+  end
+
   def input_to_index(input)
     input.to_i-1
   end
 
-  def initialize(board = nil)
-    @board = board || Array.new(9, " ")
+  def position_taken?(board, location)
+    board[location] != " "
+  end
+
+  def valid_move?(board, index)
+    index.between?(0,8) && !position_taken?(board, index)
   end
 
   def current_player
@@ -33,5 +41,9 @@ class TicTacToe
     puts " #{@board[3]} | #{@board[4]} | #{@board[5]} "
     puts "-----------"
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
+  end
+
+  def move(index)
+    @board[index] = current_player
   end
 end
